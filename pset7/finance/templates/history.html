@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <th>Stock</th>
+            <th>Price Bought / Sold</th>
+            <th>Quantity</th>
+            <th>Bought at / Sold at</th>
+            <th>Total</th>
+            
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction["stock"] }}</td>
+                <td>{{ transaction["price"] }}</td>
+                <td>{{ transaction["quantity"] }}</td>
+                <td>{{ transaction["created_at"] }}</td>
+                <td>{{ transaction["price"] * transaction["quantity"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

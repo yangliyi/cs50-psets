@@ -1,0 +1,12 @@
+1.  A header file declares sets of integer types having specified widths, and shall define corresponding sets of macros
+2.  For different sizes of values, we would need to use different type to store, i.g. uint8_t for smaller values, uint16_t for larger values.
+3.  1 byte in a BYTE, 4 bytes in a DWORD, 4 bytes in a LONG, 2 bytes in a WORD
+4.  The first 2 bytes of the BMP file format are the character "B" then the character "M" in ASCII encoding
+5.  bfSize is the size of the whole bmp file. biSize is the size of the BITMAPINFOHEADER header file.
+6.  If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner.
+7.  biBitCount
+8.  The file doesn't exist; the file is opened in a mode that doesn't allow other accesses; the file exists, but you don't have permissions.
+9.  Because we only read one element at a time.
+10. 3
+11. Sets file position.
+12. When calling fseek(), we could give SEEK_CUR as the last argument. In that case, it would change from its current location.
